@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
+const StyledButton = styled.button`
+background-color:var(--primary-color);
+`;
+
 function Button({text}) {
-  const StyledButton = styled.button`
-    background-color:var(--primary-color);
-    `;
+ 
   return (
     <StyledButton>{text}</StyledButton>
   )
