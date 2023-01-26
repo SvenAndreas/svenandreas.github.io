@@ -1,0 +1,15 @@
+.about_img{
+  width: 200px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-self: center;
+}
+
+.about_description{
+  text-align: center;
+  margin-bottom:var(--m-1-5)
+}
+
+.about_buttons{
+  justify-self: center;
+}
