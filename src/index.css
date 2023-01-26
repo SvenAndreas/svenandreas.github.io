@@ -27,7 +27,7 @@
 --h2-font:1.25rem;
 --h3-font:1.125rem;
 --normal:.938rem;
---samll:.813rem;
+--small:.813rem;
 --xs:.75rem;
 
 --font-semibold:600;
@@ -53,7 +53,7 @@
     --h2-font:1.5rem;
     --h3-font:1.25rem;
     --normal:1rem;
-    --samll:.875rem;
+    --small:.875rem;
     --xs:.81rem;
   }
 }
