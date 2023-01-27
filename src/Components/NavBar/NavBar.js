@@ -39,7 +39,7 @@ function NavBar() {
               </a>
             </li>
             <li>
-              <a href='#services' className={s.nav_link} onClick={handleToggleMenu}>
+              <a href='#service' className={s.nav_link} onClick={handleToggleMenu}>
                 <IntegrationInstructionsOutlinedIcon className={s.nav_icon}/>Services
               </a>
             </li>

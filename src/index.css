@@ -128,10 +128,29 @@ code {
   padding:1rem;
   border-radius: .5rem;
   font-weight: var(--normal);
+  cursor: pointer;
 }
 
 .button:hover{
   background-color: var(--secondary-color);
+}
+
+.button_small{
+  padding: .75rem 1rem;
+  cursor: pointer;
+  place-items: center;
+  display: inline-flex;
+}
+
+.button_link{
+  padding: 0;
+  background-color: transparent;
+  color:var(--primary-color)
+}
+
+.button_link:hover{
+  background-color: transparent;
+  color:var(--secondary-color)
 }
 
 .button_icon{
