@@ -7,7 +7,7 @@ import { GoLocation } from 'react-icons/go'
 import { AiOutlineSend } from 'react-icons/ai'
 function Contactme() {
   return (
-    <section className={`${s.contact} section`}>
+    <section className={`${s.contact} section`} id='contact'>
       <h2 className='section_title'>Contact me</h2>
       <span className='section_subtitle'>Get in touch</span>
 
@@ -16,7 +16,7 @@ function Contactme() {
           <div className={s.contact_information}>
             <BsWhatsapp className={s.contact_icon}/>
             <div>
-              <h3 className={s.contact_title}>Call me</h3>
+              <h3 className={s.contact_title}>WhatsApp</h3>
               <span className={s.contact_subtitle}>{`(+54) 11 3367 1001`}</span>
             </div>
           </div>

@@ -14,7 +14,7 @@ import { FiChevronRight } from 'react-icons/fi';
 
 function Portfolio() {
   return (
-    <section className={`${s.portfolio} section`}>
+    <section className={`${s.portfolio} section`} id='portfolio'>
       <h2 className='section_title'>Portfolio</h2>
       <span className='section_subtitle'>Works</span>
       <div className={`${s.portfolio_container} container`}>
