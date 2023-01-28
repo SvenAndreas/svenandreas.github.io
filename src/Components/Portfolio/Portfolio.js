@@ -35,6 +35,7 @@ function Portfolio() {
        }}
        modules={[Pagination, Navigation]}
        className="mySwiper"
+       
       >
         <SwiperSlide>
           <div className={`${s.portfolio_content} grid`}>

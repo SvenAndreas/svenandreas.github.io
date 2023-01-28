@@ -44,3 +44,7 @@
   left: -0.5rem;
   position: relative;
 }
+
+.bullets_active{
+  background-color: var(--primary-color);
+}

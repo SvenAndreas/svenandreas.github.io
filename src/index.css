@@ -175,9 +175,8 @@ code {
 
 .swiper-pagination-bullet-active {
   background-color:var(--primary-color) !important;
-  bottom: -2.5rem !important;
 }
 .swiper-pagination-bullet{
   position: relative;
-  bottom: -20px !important;
+  bottom: -2rem !important;
 }

@@ -1,0 +1,30 @@
+.contact_container{
+  row-gap: 3rem;
+}
+
+.contact_information{
+  display: flex;
+  margin-bottom: var(--m-2);
+}
+
+.contact_icon{
+  font-size: 2rem;
+  color:var(--primary-color);
+  margin-right: var(--m-0-75);
+}
+
+.contact_title{
+  font-size: var(--h3-font);
+  color:var(--text-color-ligthner)
+}
+.contact_content{
+  background-color: var(--input-color);
+  border-radius: .5rem;
+  padding: .75rem 1rem .25rem;
+}
+
+.textfield{
+  color:var(--primary-color) !important;
+  font-family: var(--body-font) !important;
+  font-weight: var(--font-medium) !important;
+}
