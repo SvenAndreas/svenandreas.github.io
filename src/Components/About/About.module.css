@@ -1,3 +1,7 @@
+.about{
+  z-index:10;
+  background-color: var(--body-color);
+}
 .about_img{
   width: 200px;
   border-radius: .5rem;
@@ -7,9 +11,35 @@
 
 .about_description{
   text-align: center;
-  margin-bottom:var(--m-1-5)
+  margin-bottom:var(--m-2-5)
 }
 
 .about_buttons{
-  justify-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Medium divices */
+@media screen and (min-width:568px) {
+  .about_container{
+    grid-template-columns: repeat(2 ,1fr);
+  }
+  .about_description{
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .about_container{
+    column-gap: 5rem;
+  }
+  .about_img{
+    width: 350px;
+  }
+  .about_description{
+    text-align: initial;
+  }
+  .about_buttons{
+    justify-content: initial;
+  }
 }

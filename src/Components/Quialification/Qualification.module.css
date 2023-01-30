@@ -69,3 +69,34 @@
 .qualification_button_active .qualification_button:hover{
   color:var(--body-color)
 }
+
+
+
+/* for small divices */
+@media screen and (max-width:350px) {
+  .qualification_data{
+    gap: .5rem;
+  }
+}
+
+/* For medium divices */
+@media screen and (min-width:568px) {
+  .qualification_sections{
+    display: grid;
+    grid-template-columns: .6fr;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .qualification_tabs{
+    justify-content: center;
+  }
+  .qualification_button{
+    margin: 0 var(--m-1);
+  }
+  .qualification_sections{
+    grid-template-columns: .5fr;
+  }
+  
+}

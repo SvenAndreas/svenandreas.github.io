@@ -17,7 +17,7 @@ function NavBar() {
    isActive ? setIsActive(!isActive) : setIsActive(!isActive)
   }
   return (
-    <header className={s.header_container}>
+    <header className={s.nav}>
       <nav className={s.nav_container}>
         <a href='#' className={s.nav_logo}>SAC</a>
 

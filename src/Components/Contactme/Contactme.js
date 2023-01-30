@@ -35,7 +35,9 @@ function Contactme() {
             </div>
           </div>
 
-          <form className={`${s.contact_form} grid`}>
+          
+        </div>
+        <form className={`${s.contact_form} grid`}>
             <div className={`${s.contact_inputs_container} grid`}>
               <div className={s.contact_content}>
                 <TextField id="standard-basic" label="Name"  variant="standard"  fullWidth InputLabelProps={{className:`${s.textfield}`}}  />
@@ -43,6 +45,7 @@ function Contactme() {
               <div className={s.contact_content}>
                 <TextField id="standard-basic" label="Email" variant="standard" fullWidth InputLabelProps={{className:`${s.textfield}`}} />
               </div>
+            </div>
               <div className={s.contact_content}>
                 <TextField id="standard-basic" label="Subject" variant="standard" fullWidth InputLabelProps={{className:`${s.textfield}`}} />
               </div>
@@ -52,7 +55,7 @@ function Contactme() {
                 label="Message"
                 multiline
                 variant="standard"
-                minRows={4}
+                minRows={7}
                 fullWidth
                 InputLabelProps={{className:`${s.textfield}`}}
               />
@@ -63,9 +66,8 @@ function Contactme() {
                   <AiOutlineSend className='button_icon'/>
                 </a>
               </div>
-            </div>
+            
           </form>
-        </div>
       </div>
     </section>
   )

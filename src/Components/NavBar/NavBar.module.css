@@ -1,4 +1,4 @@
-.header_container{
+.nav{
   width:100%;
   position:fixed;
   bottom:0;
@@ -11,7 +11,7 @@
   max-width:768px;
   margin-left:var(--m-1-5);
   margin-right:var(--m-1-5);
-  height: 3rem;
+  height: var(--header-height);
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -34,19 +34,7 @@
   color:var(--primary-color)
 }
 
-@media screen and (max-width:767px) {
-  .nav_menu{
-    position:fixed;
-    bottom:-100%;
-    left:0;
-    width: 100%;
-    background-color: var(--body-color);
-    padding:2rem 1.5rem 4rem;
-    box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
-    border-radius: 1.5rem 1.5rem 0 0;
-    transition: .5s
-  }
-}
+
 .nav_ul{
   display:grid;
   gap:2rem;
@@ -57,7 +45,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: var(--samll);
+  font-size: var(--small);
   color:var(--title-color);
   font-weight: var(--font-medium);
 }
@@ -83,4 +71,64 @@
 
 .show_menu{
   bottom:0 !important;
+}
+
+/* for small divices */
+
+@media screen and (max-width:350px) {
+  
+  .nav_menu{
+    padding: 2rem .25rem 4rem;
+  }
+  .nav_ul{
+    column-gap: 0;
+  }
+  
+}
+
+@media screen and (max-width:767px) {
+  .nav_menu{
+    position:fixed;
+    bottom:-100%;
+    left:0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding:2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: .5s
+  }
+}
+/* for medium divices */
+
+@media screen and (min-width:768px) {
+  .nav{
+    top:0;
+    bottom: initial;
+    padding: 0 1rem;
+  }
+  .nav_container{
+    height: calc(var(--header-heigth) + 1.5rem);
+    column-gap: 1rem;
+  }
+  .nav_icon,.nav_close,.nav_toggle{
+    display: none;
+  }
+  .nav_ul{
+    display: flex;
+    column-gap: 2rem;
+  }
+  .nav_menu{
+    margin-left: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* for large divices */
+
+@media screen and (min-width:1024px) {
+  .nav{
+    padding:0;
+  }
 }

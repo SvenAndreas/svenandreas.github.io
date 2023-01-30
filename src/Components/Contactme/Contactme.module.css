@@ -28,3 +28,34 @@
   font-family: var(--body-font) !important;
   font-weight: var(--font-medium) !important;
 }
+
+/* small divices */
+@media screen and (max-width:350px) {
+  .contact_information{
+    display: inline-block;
+    /* word-wrap: break-word; */
+  }
+  .services_content{
+    padding: 3.5rem
+  }
+  .services_modal{
+    padding: 0 .5rem;
+  }
+}
+/* for mediumd divices */
+@media screen and (min-width:568px) {
+  .contact_container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Large divices */
+
+@media screen and (min-width:1024px){
+  .contact_form{
+    width: 460px;
+  }
+  /* .contact_inputs_container{
+    grid-template-columns: repeat(2,1fr);
+  } */
+}

@@ -48,3 +48,23 @@
 .bullets_active{
   background-color: var(--primary-color);
 }
+/* Medium divices */
+@media screen and (min-width:568px) {
+  .portfolio_content{grid-template-columns: repeat(2, 1fr);}
+}
+@media screen and (min-width:768px){
+  .portfolio_img{
+    width: 320px;
+  }
+  .portfolio_content{
+    align-items: center;
+  }
+}
+
+/* for large divices */
+@media screen and (min-width:1024px){
+  .portfolio_content{
+    column-gap: 6rem;
+  }
+ 
+}

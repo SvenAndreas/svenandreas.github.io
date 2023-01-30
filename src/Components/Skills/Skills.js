@@ -32,7 +32,7 @@ function Skills() {
       <h2 className='section_title'>Skills</h2>
       <span className='section_subtitle'>Technical level</span>
       <div className={`${s.skills_container} container grid`}>  
-        <div>
+        
             {/* FRONT-END SKILLS */}
           <div className={`${s.skills_open} fixed`} onClick={handleToggleSkills} id='skills_content'>
             <div className={s.skills_header}>
@@ -121,7 +121,7 @@ function Skills() {
             </div>
           </div>
 
-        </div>
+        
       </div>
     </section>
   )

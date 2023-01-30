@@ -75,3 +75,42 @@
   margin-right: var(--m-0-25);
 }
 
+/* small divices */
+@media screen and (max-width:350px) {
+  .services_container{
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
+  .services_content{
+    padding: 3.5rem
+  }
+  .services_modal{
+    padding: 0 .5rem;
+  }
+}
+
+/* for mediumd divices */
+
+@media screen and (min-width:768px) {
+  .services_container{
+    grid-template-columns: repeat(2,218px);
+    justify-content: center;
+  }
+  .services_icon{
+    font-size: 2rem;
+  }
+  .services_content{
+    padding: 6rem 0 2rem 2.5rem;
+  }
+
+  .services_modal{
+    width: 450px;
+  }
+}
+
+/* for large divices */
+@media screen and (min-width:1024px) {
+  .services_container{
+    grid-template-columns: repeat((2,300px));
+  }
+}

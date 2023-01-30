@@ -68,7 +68,7 @@ function Services() {
             <BsArrowRightShort className={`${s.services_button_icon} button_icon `}/>
           </span>
           <dialog className={`${s.services_modal} backend`}>
-            <h4 className={s.services_modal_title}>Backend developer</h4>
+            <h4 className={s.services_modal_title}>Backend <br/> developer</h4>
             <TiTimes className={s.services_modal_close_button}  onClick={handleCloseModal} id='backend'/>
             <ul className={`${s.services_ul} grid`}>
               <li className={s.services_li}>
