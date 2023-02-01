@@ -25,7 +25,7 @@ export const validateForm = (input)=>{
     errors.user_message = '*Message needs at least 3 characters'
   }
   if(input.user_message.length <= 0){
-    errors.user_message = '*User message is required'
+    errors.user_message = '*Message is required'
   }
   
 

@@ -40,7 +40,6 @@
 
 .contact_modal_button{
   justify-self: flex-end;
-  width: 5rem;
   place-content: center;
   font-size: var(--small);
   transition: .3s;
@@ -68,8 +67,10 @@
   margin-top: var(--m-0-75);
 }
 .contact_helpertext{
-  color:var(--danger-primary-color)
+  color:var(--danger-primary-color)!important;
 }
+
+
 /* small divices */
 @media screen and (max-width:350px) {
   .contact_information{

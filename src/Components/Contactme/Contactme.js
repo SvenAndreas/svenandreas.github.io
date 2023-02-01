@@ -9,10 +9,11 @@ import emailjs from '@emailjs/browser'
 import { validateForm } from '../../Utils/ValidateForm'
 import { TiTimes } from 'react-icons/ti'
 import {AiFillCheckCircle} from 'react-icons/ai'
+import Loader from '../Loader/Loader'
 
 
 function Contactme() {
-
+  console.log(process.env)
   const initialState = {
     user_name:'',
     user_email:'',
@@ -21,6 +22,7 @@ function Contactme() {
   }
   const [form,setForm] = useState(initialState)
   const [errors,setErrors] = useState({})
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleInputChange = (e)=>{
     setForm(prev =>({...prev,[e.target.name]:e.target.value}))
@@ -33,21 +35,24 @@ function Contactme() {
 
   const sendEmail = (e)=>{
     e.preventDefault();
+    
+    const modal = document.getElementById('ok')
     const {errors,isValid} = validateForm(form)
     setErrors(errors)
     if(isValid){
+      setIsLoading(!isLoading)
       const userInfo = document.getElementById('form')
-      emailjs.sendForm('service_t4p9qx6','template_hoxlvjp',userInfo,'rY3T5mmDT_HW68XLk')
+      emailjs.sendForm(process.env.REACT_APP_SERVICE,process.env.REACT_APP_TEMPLATE,userInfo,'rY3T5mmDT_HW68XLk')
       .then(res=> {
-        if(res.text === 'OK'){
-          const modal = document.getElementById('ok')
+          setIsLoading(false)
           modal.showModal()
           setForm(initialState)
-        }
-
       }
         )
-      .catch(e=> console.log(e))
+      .catch(e=> {
+        setIsLoading(false)
+        console.log(e)
+      })
     }
   }
 
@@ -128,9 +133,18 @@ function Contactme() {
               <h4 className={s.contact_modal_subtitle}>Email sucssesfully sended</h4>
               <p className={s.contact_modal_info}>I'll get in touch as soon as possible</p>
               <h3 className={s.contact_modal_title}>Thank you!🚀</h3>
-              <a className={`${s.contact_modal_button} button button_small`} onClick={handleCloseModal}>Close</a>
-            </div>
+              <a className={`${s.contact_modal_button} button button_small`} onClick={handleCloseModal}>
+                Close
+                <TiTimes className='button_icon'/>
+              </a>
+            </div> 
           </dialog>
+          
+          {isLoading
+          ?
+          <Loader/>
+          :""
+         }
          
       </div>
     </section>
