@@ -6,8 +6,6 @@ import { AiOutlineSend } from 'react-icons/ai'
 import { CiDesktopMouse2 } from 'react-icons/ci'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import profile from '../../Assets/perfil.png'
-import pincel from '../../Assets/pincel.png'
-import pencil2 from '../../Assets/pencil2.png'
 import useScrollEffect from '../../CustomHooks/useScrollEffect'
 import wave from '../../Assets/wave.svg'
 

@@ -57,7 +57,7 @@ function Portfolio() {
             <div className={s.portfolio_data}>
               <h3 className={s.portfolio_title}>E-commerce web App</h3>
               <p className={s.portfolio_description}>This my second project is still in progress and involves several key features, including route protection, a relational database, user and admin panels, a shopping cart with a payment gateway, a newsletter system, a calendar system for scheduling dates between different branches, and third-party authentication.</p>
-                <a href='https://pf-henrygadget.onrender.com/' target='_blank' className='button button_small'>
+                <a href='https://pf-henrygadget.onrender.com/' target='_blank' rel='noreferrer' className='button button_small'>
                   Demo
                   <BsArrowRightShort className='button_icon'/>
                 </a>

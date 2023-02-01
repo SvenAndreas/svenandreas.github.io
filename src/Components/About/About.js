@@ -21,7 +21,7 @@ function About() {
             <a download href={cv} className='button'>
             Download CV <FiDownload className='button_icon'/>
             </a>
-            <a href={cv} target='_blank' className='button'>
+            <a href={cv} target='_blank' rel='noreferrer' className='button'>
             View Online <AiOutlineFilePdf className='button_icon'/>
             </a>
           </div>
