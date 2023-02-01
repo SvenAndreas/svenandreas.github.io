@@ -74,9 +74,12 @@ function Home() {
             </div>
 
             <div className={s.home_data}>
-                <h1 className={s.home_title}>Hi,I'm Sven Andreas Clausz</h1>
+                <h1 className={s.home_title}>Hi, I'm Sven Andreas Clausz</h1>
                 <h3 className={s.home_subtitle}>Fullstack developer Frontend oriented</h3>
-                <p className={s.home_description}>Impus lorum add shomting later now just makeing it work</p>
+                <p className={s.home_description}>
+                  While I'm well-versed in both front-end and back-end development, I have a particular passion for front-end work.<br/>
+                  I stay current with the latest technologies and trends, and I'm always looking to improve and expand my skillset.
+                  </p>
                 <a href='#contact' className='button_secondary'>
                   Contact Me
                   <AiOutlineSend className='button_icon'/>

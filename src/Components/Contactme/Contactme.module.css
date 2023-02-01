@@ -29,20 +29,57 @@
   font-weight: var(--font-medium) !important;
 }
 
+.contact_modal{
+  margin: auto;
+  border: none;
+  background-color: var(--container-color);
+  border-radius: .5rem;
+  padding: 1.5rem;
+  overflow: visible;
+}
+
+.contact_modal_button{
+  justify-self: flex-end;
+  width: 5rem;
+  place-content: center;
+  font-size: var(--small);
+  transition: .3s;
+}
+
+.contact_modal_button:hover{
+  background-color: var(--secondary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.contact_modal_checkicon{
+  color: var(--primary-color);
+  position: absolute;
+  top:-25px;
+  font-size: 3.5rem;
+}
+.contact_modal_title{
+  font-size: var(--h2-font);
+  font-weight: var(--font-semibold);
+}
+
+.contact_modal_subtitle{
+  font-size: var(--h3-font);
+  font-weight: var(--font-medium);
+  margin-top: var(--m-0-75);
+}
+.contact_helpertext{
+  color:var(--danger-primary-color)
+}
 /* small divices */
 @media screen and (max-width:350px) {
   .contact_information{
     display: inline-block;
     /* word-wrap: break-word; */
   }
-  .services_content{
-    padding: 3.5rem
-  }
-  .services_modal{
-    padding: 0 .5rem;
-  }
+ 
 }
 /* for mediumd divices */
+
 @media screen and (min-width:568px) {
   .contact_container{
     grid-template-columns: repeat(2,1fr);

@@ -15,17 +15,33 @@
 }
 
 .about_buttons{
-  display: flex;
+  display: grid;
   justify-content: center;
+  gap: 10px;
 }
 
 /* Medium divices */
+@media screen and (min-width:390px){
+  .about_buttons{
+    grid-template-columns: repeat(2,minmax(12rem,1fr));
+
+  }
+}
 @media screen and (min-width:568px) {
   .about_container{
     grid-template-columns: repeat(2 ,1fr);
   }
   .about_description{
     justify-content: center;
+  }
+  .about_buttons{
+    grid-template-columns: repeat(1,11rem);
+  }
+}
+
+@media screen and (min-width:645px){
+  .about_buttons{
+    grid-template-columns: repeat(2,11rem);
   }
 }
 

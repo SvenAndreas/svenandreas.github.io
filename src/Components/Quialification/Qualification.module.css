@@ -93,7 +93,7 @@
     justify-content: center;
   }
   .qualification_button{
-    margin: 0 var(--m-1);
+    margin: 0 var(--m-2);
   }
   .qualification_sections{
     grid-template-columns: .5fr;

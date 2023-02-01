@@ -40,11 +40,11 @@ function Services() {
             <ul className={`${s.services_ul} grid`}>
               <li className={s.services_li}>
                 <BsCheck2Circle className={s.services_modal_check_icon}/>
-                <p>Ux Ui</p>
+                <p>I develop UI and create UX elements interactions.</p>
               </li>
               <li className={s.services_li}>
                 <BsCheck2Circle className={s.services_modal_check_icon}/>
-                <p>Web page development</p>
+                <p>Responsive web desing</p>
               </li>
               <li className={s.services_li}>
                 <BsCheck2Circle className={s.services_modal_check_icon}/>
@@ -52,7 +52,15 @@ function Services() {
               </li>
               <li className={s.services_li}>
                 <BsCheck2Circle className={s.services_modal_check_icon}/>
-                <p>Ux Ui</p>
+                <p>APIs and Back-end services integration.</p>
+              </li>
+              <li className={s.services_li}>
+                <BsCheck2Circle className={s.services_modal_check_icon}/>
+                <p>Manteinence and updates of existing apps</p>
+              </li>
+              <li className={s.services_li}>
+                <BsCheck2Circle className={s.services_modal_check_icon}/>
+                <p>Readble, scalable and well organized code</p>
               </li>
             </ul>
           </dialog>
@@ -73,19 +81,23 @@ function Services() {
             <ul className={`${s.services_ul} grid`}>
               <li className={s.services_li}>
                 <BsCheck2Circle className={s.services_modal_check_icon}/>
-                <p>Ux Ui</p>
+                <p>API development and integration with third-party APIs</p>
               </li>
               <li className={s.services_li}>
                 <BsCheck2Circle className={s.services_modal_check_icon}/>
-                <p>Web page development</p>
+                <p>Database desing and management {'(SQL,Firebase)'}</p>
               </li>
               <li className={s.services_li}>
                 <BsCheck2Circle className={s.services_modal_check_icon}/>
-                <p>App development</p>
+                <p>Authentication and authorization</p>
               </li>
               <li className={s.services_li}>
                 <BsCheck2Circle className={s.services_modal_check_icon}/>
-                <p>Ux Ui</p>
+                <p>Maitenance and updates of existing apps</p>
+              </li>
+              <li className={s.services_li}>
+                <BsCheck2Circle className={s.services_modal_check_icon}/>
+                <p>Readble, scalable and well organized code</p>
               </li>
             </ul>
           </dialog>

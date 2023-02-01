@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from "swiper";
 import { FiChevronLeft } from 'react-icons/fi'
 import { FiChevronRight } from 'react-icons/fi';
+import { AiOutlineSend } from 'react-icons/ai'
 
 
 
@@ -37,25 +38,12 @@ function Portfolio() {
        className="mySwiper"
        
       >
-        <SwiperSlide>
-          <div className={`${s.portfolio_content} grid`}>
-            <img src={henry} alt='porfolioPicture' className={s.portfolio_img}/>
-            <div className={s.portfolio_data}>
-              <h3 className={s.portfolio_title}>E-commerce web app</h3>
-              <p className={s.portfolio_description}>A single page applicaction made with react , express, postgresSQL, blabla..blabablabla.. etectec</p>
-                <a href='#' target='_blank' className='button button_small'>
-                  Demo
-                  <BsArrowRightShort className='button_icon'/>
-                </a>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
+         <SwiperSlide>
          <div className={`${s.portfolio_content} grid`}>
             <img src={henry} alt='porfolioPicture' className={s.portfolio_img}/>
             <div className={s.portfolio_data}>
               <h3 className={s.portfolio_title}>CRUD SPA</h3>
-              <p className={s.portfolio_description}>A single page applicaction made with react , express, postgresSQL, blabla..blabablabla.. etectec</p>
+              <p className={s.portfolio_description}>This is my first project, is a web application developed for Henry's Bootcamp using pure CSS, React, PostgreSQL, Sequelize, and Express. The app retrieves data from the Spoonacular API and presents it in card format with a pagination. Users can filter the data using filters or the search bar, and can also create, update, and delete their own custom recipes</p>
               <a href='#' target='_blank' className={`${s.portfolio_button} button_small button`}>
                 Demo
                 <BsArrowRightShort className={`${s.portfolio_button_icon} button_icon `}/>
@@ -67,11 +55,24 @@ function Portfolio() {
           <div className={`${s.portfolio_content} grid`}>
             <img src={henry} alt='porfolioPicture' className={s.portfolio_img}/>
             <div className={s.portfolio_data}>
-              <h3 className={s.portfolio_title}>E-commerce web app</h3>
-              <p className={s.portfolio_description}> A single page applicaction made with react , express, postgresSQL, blabla..blabablabla.. etectec</p>
-              <a href='#' target='_blank' className={`${s.portfolio_button} button_small button`}>
-                Demo
-                <BsArrowRightShort className={`${s.portfolio_button_icon} button_icon `}/>
+              <h3 className={s.portfolio_title}>E-commerce web App</h3>
+              <p className={s.portfolio_description}>This my second project is still in progress and involves several key features, including route protection, a relational database, user and admin panels, a shopping cart with a payment gateway, a newsletter system, a calendar system for scheduling dates between different branches, and third-party authentication.</p>
+                <a href='https://pf-henrygadget.onrender.com/' target='_blank' className='button button_small'>
+                  Demo
+                  <BsArrowRightShort className='button_icon'/>
+                </a>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={`${s.portfolio_content} grid`}>
+            <img src={henry} alt='porfolioPicture' className={s.portfolio_img}/>
+            <div className={s.portfolio_data}>
+              <h3 className={s.portfolio_title}>Coming soon...</h3>
+              <p className={s.portfolio_description}> Your project 😎</p>
+              <a href='#contact' className={`${s.portfolio_button} button_small button`}>
+                Contact Me
+                <AiOutlineSend className={`${s.portfolio_button_icon} button_icon `}/>
               </a>
             </div>
           </div>

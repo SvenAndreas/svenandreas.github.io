@@ -162,4 +162,7 @@
   .home_social{
     transform: translateX(-6rem);
   }
+  .home_content{
+    padding-top: 1rem;
+  }
 }

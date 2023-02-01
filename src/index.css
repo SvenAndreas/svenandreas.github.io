@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Kanit:wght@400;500;600&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Kanit:wght@400;500;600&family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap');
 
 
 
@@ -13,6 +13,7 @@
 --header-height:3rem;
 --hue-color:233;
 --hue-color-secondary:271;
+--hue-color-danger:0;
 
 /* Color theme */
 --primary-color:hsl(var(--hue-color),69%,61%);
@@ -28,10 +29,11 @@
 --scroll-thumb-color:hsl(var(--hue-color),12%,80%);
 --secondary-bg:hsl(var(--hue-color-secondary),80%,19%);
 --primary-bg:hsl(var(--hue-color-secondary),56%,43%);
+--danger-primary-color:hsl(var(--hue-color-danger),69%,61%);
 
 
 /* Fonts and typography */
---body-font:'Poppins','Quicksand', sans-serif;
+--body-font:'Open Sans','Quicksand', sans-serif;
 --big-font:2rem;
 --h1-font:1.5rem;
 --h2-font:1.25rem;

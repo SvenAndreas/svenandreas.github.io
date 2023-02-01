@@ -19,7 +19,7 @@ function NavBar() {
   return (
     <header className={s.nav}>
       <nav className={s.nav_container}>
-        <a href='#' className={s.nav_logo}>SAC</a>
+        <a href='#about' className={s.nav_logo}>SVEN</a>
 
         <div className={`${s.nav_menu} ${isActive ? s.show_menu : ''}`} id='nav_menu'>
           <ul className={s.nav_ul}>

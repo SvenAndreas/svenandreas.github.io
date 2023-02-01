@@ -73,6 +73,7 @@
 .services_modal_check_icon{
   color: var(--primary-color);
   margin-right: var(--m-0-25);
+  min-width: 20px;
 }
 
 /* small divices */
@@ -111,6 +112,6 @@
 /* for large divices */
 @media screen and (min-width:1024px) {
   .services_container{
-    grid-template-columns: repeat((2,300px));
+    grid-template-columns: repeat((2,300px)) !important;
   }
 }
