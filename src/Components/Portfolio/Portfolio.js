@@ -44,10 +44,10 @@ function Portfolio() {
             <div className={s.portfolio_data}>
               <h3 className={s.portfolio_title}>CRUD SPA</h3>
               <p className={s.portfolio_description}>This is my first project, is a web application developed for Henry's Bootcamp using pure CSS, React, PostgreSQL, Sequelize, and Express. The app retrieves data from the Spoonacular API and presents it in card format with a pagination. Users can filter the data using filters or the search bar, and can also create, update, and delete their own custom recipes</p>
-              <a href='#' target='_blank' className={`${s.portfolio_button} button_small button`}>
-                Demo
-                <BsArrowRightShort className={`${s.portfolio_button_icon} button_icon `}/>
-              </a>
+              <a href='#' target='_blank' rel='noreferrer' className='button button_small'>
+                  Demo
+                  <BsArrowRightShort className='button_icon'/>
+                </a>
             </div>
           </div>
         </SwiperSlide>
