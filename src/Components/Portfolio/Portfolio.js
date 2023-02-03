@@ -1,6 +1,8 @@
 import React from 'react'
 import s from './Portfolio.module.css'
 import henry from '../../Assets/henrygadget.gif'
+import project from '../../Assets/project1.png'
+import comming from '../../Assets/commingsoon.png';
 import { BsArrowRightShort } from 'react-icons/bs'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
@@ -40,11 +42,11 @@ function Portfolio() {
       >
          <SwiperSlide>
          <div className={`${s.portfolio_content} grid`}>
-            <img src={henry} alt='porfolioPicture' className={s.portfolio_img}/>
+            <img src={project} alt='porfolioPicture' className={s.portfolio_img}/>
             <div className={s.portfolio_data}>
               <h3 className={s.portfolio_title}>CRUD SPA</h3>
               <p className={s.portfolio_description}>This is my first project, is a web application developed for Henry's Bootcamp using pure CSS, React, PostgreSQL, Sequelize, and Express. The app retrieves data from the Spoonacular API and presents it in card format with a pagination. Users can filter the data using filters or the search bar, and can also create, update, and delete their own custom recipes</p>
-              <a href='#' target='_blank' rel='noreferrer' className='button button_small'>
+              <a href='https://foodpi-igu3.onrender.com/' target='_blank' rel='noreferrer' className='button button_small'>
                   Demo
                   <BsArrowRightShort className='button_icon'/>
                 </a>
@@ -66,7 +68,7 @@ function Portfolio() {
         </SwiperSlide>
         <SwiperSlide>
           <div className={`${s.portfolio_content} grid`}>
-            <img src={henry} alt='porfolioPicture' className={s.portfolio_img}/>
+            <img src={comming} alt='porfolioPicture' className={s.portfolio_img}/>
             <div className={s.portfolio_data}>
               <h3 className={s.portfolio_title}>Coming soon...</h3>
               <p className={s.portfolio_description}> Your project 😎</p>
