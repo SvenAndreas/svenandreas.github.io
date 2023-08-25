@@ -3,7 +3,7 @@ import s from './About.module.css'
 import { FiDownload } from 'react-icons/fi'
 import { AiOutlineFilePdf } from 'react-icons/ai'
 import about from '../../Assets/about.jpeg'
-import cv from '../../Assets/CV.pdf';
+import cv from '../../Assets/cv.pdf';
 
 function About() {
   return (
