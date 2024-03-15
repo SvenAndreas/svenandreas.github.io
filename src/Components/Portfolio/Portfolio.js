@@ -41,7 +41,7 @@ function Portfolio() {
        className="mySwiper"
        
       >
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className={`${s.portfolio_content} grid`}>
             <img src={henry} alt='porfolioPicture' className={s.portfolio_img}/>
             <div className={s.portfolio_data}>
@@ -54,7 +54,7 @@ function Portfolio() {
                 </a>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
          <SwiperSlide>
          <div className={`${s.portfolio_content} grid`}>
             <img src={project} alt='porfolioPicture' className={s.portfolio_img}/>
@@ -77,10 +77,10 @@ function Portfolio() {
               <p className={s.portfolio_description}>It's currently in development – a mobile application tailored for both Android and iOS platforms. The technologies I'm employing include React Native for the frontend and Firebase as the backend service. I hold the responsibility for the entire application development process.
               The app boasts geolocation functionality, enabling the arrangement of services provided by app users based on their geographic location. It offers features like QR code generation and reading, user-to-user transactions, recent activity tracking, profile and service editing capabilities, and a multitude of other functionalities.
               </p>
-              {/* <a href='https://foodpi-igu3.onrender.com/' target='_blank' rel='noreferrer' className='button button_small'>
+               <a href='https://ecowe.vercel.app' target='_blank' rel='noreferrer' className='button button_small'>
                   Demo
                   <BsArrowRightShort className='button_icon'/>
-                </a> */}
+                </a> 
             </div>
           </div>
         </SwiperSlide>
@@ -100,7 +100,7 @@ function Portfolio() {
         <div className={`swiper-button-next`}>
           <FiChevronRight className={s.swiper_button_next}></FiChevronRight>
         </div>
-        <div className='swiper-button-prev'>
+        <div className={`swiper-button-prev`}>
           <FiChevronLeft className={s.swiper_button_prev} />
         </div>
       </Swiper>

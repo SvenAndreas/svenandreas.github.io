@@ -16,6 +16,31 @@
   justify-content:space-between;
   align-items:center;
 }
+.nav_header{
+  display: flex;
+  flex-direction: row;
+  gap:var(--m-1-5)
+}
+.nav_languages{
+  cursor: pointer;
+  position: relative;
+}
+.nav_languages:hover ul.nav_languages_submenu{
+  display: block;
+  position: absolute;
+  visibility: visible;
+  left: 0;
+  right: 0;
+}
+.nav_languages_submenu{
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: var(--body-color);
+  margin-top: 8px;
+}
+
 .nav_logo,.nav_toggle{
   color:var(--title-color);
   font-weight: var(--font-medium);

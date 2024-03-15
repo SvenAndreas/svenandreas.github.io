@@ -19,7 +19,30 @@ function NavBar() {
   return (
     <header className={s.nav}>
       <nav className={s.nav_container}>
+      <div className={s.nav_header}>
         <a href='#about' className={s.nav_logo}>SVEN</a>
+        <div className={s.nav_languages}>
+            <p>Idioma</p>
+            <ul className={s.nav_languages_submenu}>
+              <li>
+
+              <button>
+                <span>LOGO</span>
+                Español
+              </button>
+              </li>
+             
+              <li>
+              <button>
+                <span>LOGO</span>
+                English
+              </button>
+
+              </li>
+            </ul>
+        </div>
+
+      </div>
 
         <div className={`${s.nav_menu} ${isActive ? s.show_menu : ''}`} id='nav_menu'>
           <ul className={s.nav_ul}>
