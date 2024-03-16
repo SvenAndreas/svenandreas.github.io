@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import s from './Skills.module.css'
 import { BiCodeCurly } from 'react-icons/bi'
 import { FaAngleDown } from 'react-icons/fa'
@@ -13,7 +13,7 @@ import postgres from '../../Assets/icons/postgresicon.png'
 import redux from '../../Assets/icons/reduxicon.png'
 import sequelize from '../../Assets/icons/sequelizeicon.png'
 import css from '../../Assets/icons/cssicon.png'
-
+import {LanguageContext} from '../../Contexts/languageContext'
 
 function Skills() {
   const handleToggleSkills = (e)=>{
@@ -25,11 +25,11 @@ function Skills() {
       e.currentTarget.classList.add(`${s.skills_open}`)
     }
   }
-
+const {language} = useContext(LanguageContext)
   return (
     <section className={`${s.skills} section`} id='skills'>
-      <h2 className='section_title'>Skills</h2>
-      <span className='section_subtitle'>Technical level</span>
+      <h2 className='section_title'>{language === 'ES' ? 'Hablidades' : 'Skills'}</h2>
+      <span className='section_subtitle'>{language === 'ES' ? 'Nivel técnico' : 'Technical level'}</span>
       <div className={`${s.skills_container} container grid`}>  
         
             {/* FRONT-END SKILLS */}
@@ -37,8 +37,8 @@ function Skills() {
             <div className={s.skills_header}>
               <BiCodeCurly className={s.skills_icon}/>
               <div>
-                <h1 className={s.skills_title}>Frontend developer</h1>
-                <span className={s.skills_subtitle}>1 year</span>
+                <h1 className={s.skills_title}>{language === 'ES' ?'Desarrollador frontend':'Frontend developer'}</h1>
+                <span className={s.skills_subtitle}>{language === 'ES' ? '2 años' :'2 year'}</span>
               </div>
               <FaAngleDown className={s.skills_arrow}/>
             </div>
@@ -81,8 +81,8 @@ function Skills() {
             <div className={s.skills_header}>
               <FaServer className={s.skills_icon}/>
               <div>
-                <h1 className={s.skills_title}>Backend developer</h1>
-                <span className={s.skills_subtitle}>1 year</span>
+                <h1 className={s.skills_title}>{language === 'ES' ? 'Desarrollador backend' : 'Backend developer'}</h1>
+                <span className={s.skills_subtitle}>{language === 'ES' ? '2 años' : '2 year'}</span>
               </div>
               <FaAngleDown className={s.skills_arrow}/>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import s from './Home.module.css'
 import { SlSocialLinkedin } from 'react-icons/sl'
 import { RiGithubLine } from 'react-icons/ri'
@@ -7,9 +7,11 @@ import { CiDesktopMouse2 } from 'react-icons/ci'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import profile from '../../Assets/perfil.png'
 import useScrollEffect from '../../CustomHooks/useScrollEffect'
-import wave from '../../Assets/wave.svg'
+import { LanguageContext } from '../../Contexts/languageContext'
+
 
 function Home() {
+  const {language} = useContext(LanguageContext)
   const imgRef=useScrollEffect()
   return (
     <section className={`${s.home} section`} id='home'>
@@ -72,14 +74,11 @@ function Home() {
             </div>
 
             <div className={s.home_data}>
-                <h1 className={s.home_title}>Hi, I'm Sven Andreas Clausz</h1>
-                <h3 className={s.home_subtitle}>Fullstack developer Frontend oriented</h3>
-                <p className={s.home_description}>
-                  While I'm well-versed in both front-end and back-end development, I have a particular passion for front-end work.<br/>
-                  I stay current with the latest technologies and trends, and I'm always looking to improve and expand my skillset.
-                  </p>
+                <h1 className={s.home_title}>{language === 'ES' ? 'Hola, soy Sven Andreas Clausz' :"Hi, I'm Sven Andreas Clausz"}</h1>
+                <h3 className={s.home_subtitle}>{language === 'ES' ? 'Desarrollador de software':"Software developer"}</h3>
+                {language === 'ES' ? <p className={s.home_description}>Construyo <span className={s.home_highligth}>páginas y aplicaciones web y móviles (IOS & Android)</span>  intuitivas con diseños exclusivos, manteniéndome a la vanguardia de las últimas tendencias tecnológicas.<br></br> Ayudando a aumentar la eficiencia de tu negocio.</p> : <p className={s.home_description}>Developing <span className={s.home_highligth}>intuitive web pages and mobile applications (iOS & Android)</span> with exclusive designs, staying at the forefront of the latest technological trends.<br></br> Helping to <span className={s.home_highligth}>increase the efficiency of your business.</span></p>}
                 <a href='#contact' className='button_secondary'>
-                  Contact Me
+                  {language === 'ES' ? 'Contáctame' : 'Contact Me'}
                   <AiOutlineSend className='button_icon'/>
                 </a>
             </div>

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useState} from 'react'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import ArticleOutlinedIcon from '@mui/icons-material/ArticleOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
@@ -9,9 +9,7 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import s from './NavBar.module.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import useDetectHover from '../../CustomHooks/useDetectHover';
-import { hover } from '@testing-library/user-event/dist/hover';
 import { LanguageContext } from '../../Contexts/languageContext';
 
 function NavBar() {
@@ -19,14 +17,14 @@ function NavBar() {
   const handleToggleMenu = ()=>{
    isActive ? setIsActive(!isActive) : setIsActive(!isActive)
   }
-  const {hovered} = useDetectHover('prueba',0)
+  const {hovered} = useDetectHover('dropdown',0)
   const {language,setLanguage} = useContext(LanguageContext)
   return (
     <header className={s.nav}>
       <nav className={s.nav_container}>
       <div className={s.nav_header}>
         <a href='#about' className={s.nav_logo}>SVEN</a>
-        <div id='prueba' className={s.nav_dropdown_container}>
+        <div id='dropdown' className={s.nav_dropdown_container}>
           <KeyboardArrowDownIcon className={`${s.nav_dropdown_icon} ${hovered ?  s.nav_dropdown_icon_hovered : ''}`}/>
           <p>Idiomas</p>
           <p className={s.nav_dropdown_lang}>{language}</p>
@@ -49,32 +47,32 @@ RelShot 263, Echando una mano, Public domain, via Wikimedia Commons
           <ul className={s.nav_ul}>
             <li>
               <a href='#home' className={s.nav_link} onClick={handleToggleMenu}>
-                <HomeOutlinedIcon className={s.nav_icon}/>Home
+                <HomeOutlinedIcon className={s.nav_icon}/>{language === 'ES' ? 'Inicio' : 'Home'}
               </a>
             </li>
             <li>
               <a href='#about' className={s.nav_link} onClick={handleToggleMenu}>
-               <PersonOutlineOutlinedIcon className={s.nav_icon}/>About
+               <PersonOutlineOutlinedIcon className={s.nav_icon}/>{language === 'ES' ? 'Sobre mí' : 'About'}
               </a>
             </li>
             <li>
               <a href='#skills' className={s.nav_link} onClick={handleToggleMenu}>
-               <ArticleOutlinedIcon className={s.nav_icon}/>Skills
+               <ArticleOutlinedIcon className={s.nav_icon}/>{language === 'ES' ? 'Habilidades' : 'Skills'}
               </a>
             </li>
             <li>
               <a href='#service' className={s.nav_link} onClick={handleToggleMenu}>
-                <IntegrationInstructionsOutlinedIcon className={s.nav_icon}/>Services
+                <IntegrationInstructionsOutlinedIcon className={s.nav_icon}/>{language === 'ES' ? 'Servicios' : 'Services'}
               </a>
             </li>
             <li>
               <a href='#portfolio' className={s.nav_link} onClick={handleToggleMenu}>
-               <WorkOutlineOutlinedIcon className={s.nav_icon}/>Portfolio
+               <WorkOutlineOutlinedIcon className={s.nav_icon}/>{language === 'ES' ? 'Portafolio' : 'Portfolio'}
               </a>
             </li>
             <li>
               <a href='#contact' className={s.nav_link} onClick={handleToggleMenu}>
-                <SendOutlinedIcon className={s.nav_icon}/>Contact
+                <SendOutlinedIcon className={s.nav_icon}/>{language === 'ES' ? 'Contacto' : 'Contact'}
               </a>
             </li>
           </ul>

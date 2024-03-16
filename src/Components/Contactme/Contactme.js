@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useContext} from 'react'
 import s from './Contactme.module.css'
 import { BsWhatsapp } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
@@ -10,10 +10,10 @@ import { validateForm } from '../../Utils/ValidateForm'
 import { TiTimes } from 'react-icons/ti'
 import {AiFillCheckCircle} from 'react-icons/ai'
 import Loader from '../Loader/Loader'
+import { LanguageContext } from '../../Contexts/languageContext'
 
 
 function Contactme() {
-  console.log(process.env)
   const initialState = {
     user_name:'',
     user_email:'',
@@ -32,12 +32,13 @@ function Contactme() {
     const modal = document.getElementById('ok')
     modal.close()
   }
+  const {language} = useContext(LanguageContext)
 
   const sendEmail = (e)=>{
     e.preventDefault();
     
     const modal = document.getElementById('ok')
-    const {errors,isValid} = validateForm(form)
+    const {errors,isValid} = validateForm(form,language)
     setErrors(errors)
     if(isValid){
       setIsLoading(!isLoading)
@@ -55,11 +56,10 @@ function Contactme() {
       })
     }
   }
-
   return (
     <section className={`${s.contact} section`} id='contact'>
-      <h2 className='section_title'>Contact me</h2>
-      <span className='section_subtitle'>Get in touch</span>
+      <h2 className='section_title'>{language === 'ES' ?'Contacto':'Contact me'}</h2>
+      <span className='section_subtitle'>{language === 'ES' ?'Envíame un mensaje':'Get in touch'}</span>
 
       <div className={`${s.contact_container} container grid`}>
         <div>
@@ -80,7 +80,7 @@ function Contactme() {
           <div className={s.contact_information}>
             <GoLocation className={s.contact_icon}/>
             <div>
-              <h3 className={s.contact_title}>Location</h3>
+              <h3 className={s.contact_title}>{language === 'ES' ? 'Locación': 'Location'}</h3>
               <span className={s.contact_subtitle}>Casa Grande - Córdoba - Argentina</span>
             </div>
           </div>
@@ -90,7 +90,7 @@ function Contactme() {
         <form className={`${s.contact_form} grid`} id='form'>
             <div className={`${s.contact_inputs_container} grid`}>
               <div className={s.contact_content}>
-                <TextField id="standard-basic" label="Name" name='user_name' value={form.user_name} onChange={handleInputChange} variant="standard"  fullWidth InputLabelProps={{className:`${s.textfield}`}}  />
+                <TextField id="standard-basic" label={language === 'ES' ? 'Nombre':"Name"} name='user_name' value={form.user_name} onChange={handleInputChange} variant="standard"  fullWidth InputLabelProps={{className:`${s.textfield}`}}  />
                 <FormHelperText className={s.contact_helpertext}>{errors.user_name ? errors.user_name : ''}</FormHelperText>
               </div>
               <div className={s.contact_content}>
@@ -99,13 +99,13 @@ function Contactme() {
               </div>
             </div>
               <div className={s.contact_content}>
-                <TextField id="standard-basic" label="Subject" name='user_subject' value={form.user_subject} onChange={handleInputChange} variant="standard" fullWidth InputLabelProps={{className:`${s.textfield}`}}/>
+                <TextField id="standard-basic" label={language === 'ES' ? 'Tema' :'Subject'} name='user_subject' value={form.user_subject} onChange={handleInputChange} variant="standard" fullWidth InputLabelProps={{className:`${s.textfield}`}}/>
                 <FormHelperText className={s.contact_helpertext}>{errors.user_subject ? errors.user_subject : ''}</FormHelperText>
               </div>
               <div className={s.contact_content} InputLabelProps={{className:`${s.textfield}`}}>
               <TextField
                 id="standard-multiline-static"
-                label="Message"
+                label={language === 'ES' ? 'Mensaje': "Message"}
                 multiline
                 variant="standard"
                 minRows={7}

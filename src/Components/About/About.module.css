@@ -11,13 +11,18 @@
 
 .about_description{
   text-align: center;
-  margin-bottom:var(--m-2-5)
+  margin-bottom:var(--m-2-5);
+  text-wrap: balance;
+  line-height: 1.6;
 }
 
 .about_buttons{
   display: grid;
   justify-content: center;
   gap: 10px;
+}
+.about_higiligth{
+  font-weight: var(--font-semibold);
 }
 
 /* Medium divices */
