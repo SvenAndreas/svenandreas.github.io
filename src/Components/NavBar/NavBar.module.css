@@ -19,28 +19,63 @@
 .nav_header{
   display: flex;
   flex-direction: row;
-  gap:var(--m-1-5)
-}
-.nav_languages{
+  gap: var(--m-1-5);
   cursor: pointer;
+}
+.nav_dropdown_container{
+  display:flex;
+  flex-direction: row;
+  gap:4px;
   position: relative;
 }
-.nav_languages:hover ul.nav_languages_submenu{
-  display: block;
-  position: absolute;
-  visibility: visible;
-  left: 0;
-  right: 0;
+.nav_dropdown_lang{
+  font-weight: var(--font-semibold);
+  color:var(--title-color)
 }
-.nav_languages_submenu{
-  visibility: hidden;
+.nav_dropdown_menu{
   position: absolute;
-  left: 0;
-  right: 0;
+  top:20px;
+  border-radius: 0.25rem;
   background-color: var(--body-color);
-  margin-top: 8px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.15);
+  /* padding: 8px; */
+  width: 120px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+  transition: ease-in 200ms;
+  visibility: hidden;
+}
+.nav_dropdown_menu_active{
+  transform: translateY(4px);
+  opacity: 1;
+  visibility: visible;
+}
+.nav_dropdown_icon{
+  transition: ease-in 200ms;
+  /* transform: rotate(180deg); */
+}
+.nav_dropdown_icon_hovered{
+  transform: rotate(180deg);
 }
 
+.nav_dropdown_menu li{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap:8px;
+  padding: 8px;
+}
+.nav_dropdown_menu li:hover{
+ color:var(--title-color);
+ background-color: rgba(0,0,0,0.05)
+}
+
+.nav_dropdown_img{
+  width: 24px;
+  border-radius: 100%;
+}
 .nav_logo,.nav_toggle{
   color:var(--title-color);
   font-weight: var(--font-medium);
@@ -111,6 +146,7 @@
     column-gap: 0;
   }
   
+  
 }
 
 @media screen and (max-width:767px) {
@@ -124,6 +160,21 @@
     box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: .5s
+    
+  }
+  .nav_dropdown_menu_active{
+    transform: translateY(-50px);
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav_dropdown_menu{
+    top:-40px
+  }
+  .nav_dropdown_icon{
+    transform: rotate(180deg);
+  }
+  .nav_dropdown_icon_hovered{
+    transform: rotate(-360deg);
   }
 }
 /* for medium divices */
