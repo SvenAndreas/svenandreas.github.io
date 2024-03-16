@@ -119,7 +119,7 @@ function Contactme() {
               </div>
               <div>
                 <a className='button' onClick={sendEmail}>
-                  Send Message
+                  {language === 'ES' ? 'Enviar mensaje':'Send Message'}
                   <AiOutlineSend className='button_icon'/>
                 </a>
               </div>
@@ -130,9 +130,9 @@ function Contactme() {
               <AiFillCheckCircle className={s.contact_modal_checkicon}/>
             </div>
             <div className='grid'>
-              <h4 className={s.contact_modal_subtitle}>Email sucssesfully sended</h4>
-              <p className={s.contact_modal_info}>I'll get in touch as soon as possible</p>
-              <h3 className={s.contact_modal_title}>Thank you!🚀</h3>
+              <h4 className={s.contact_modal_subtitle}>{language === 'ES' ? 'Mail enviado satisfactoriamente':'Email sucssesfully sended'}</h4>
+              <p className={s.contact_modal_info}>{language === 'ES' ? 'Me pondré en contacto lo antes posible' : `I'll get in touch as soon as possible`}</p>
+              <h3 className={s.contact_modal_title}>{language === 'ES' ? 'Gracias!🚀' :`Thank you!🚀`}</h3>
               <a className={`${s.contact_modal_button} button button_small`} onClick={handleCloseModal}>
                 Close
                 <TiTimes className='button_icon'/>
