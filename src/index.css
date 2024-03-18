@@ -16,8 +16,10 @@
 --hue-color-danger:0;
 
 /* Color theme */
---primary-color:hsl(var(--hue-color),69%,61%);
---secondary-color:hsl(var(--hue-color),57%,53%);
+/* --primary-color:hsl(var(--hue-color),69%,61%);
+--secondary-color:hsl(var(--hue-color),57%,53%); */
+--primary-color:rgba(0,0,0);
+--secondary-color:rgba(35,35,35);
 --ligthner-color:hsl(var(--hue-color),92%,85%);
 --title-color:hsl(var(--hue-color),8%,15%);
 --text-color:hsl(var(--hue-color),8%,45%);
@@ -28,7 +30,8 @@
 --scroll-bar-color:hsl(var(--hue-color),12%,90%);
 --scroll-thumb-color:hsl(var(--hue-color),12%,80%);
 --secondary-bg:hsl(var(--hue-color-secondary),80%,19%);
---primary-bg:hsl(var(--hue-color-secondary),56%,43%);
+/* --primary-bg:hsl(var(--hue-color-secondary),56%,43%); */
+--primary-bg:rgb(50,50,50);
 --danger-primary-color:hsl(var(--hue-color-danger),69%,61%);
 
 

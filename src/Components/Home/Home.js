@@ -15,7 +15,7 @@ function Home() {
   const imgRef=useScrollEffect()
   return (
     <section className={`${s.home} section`} id='home'>
-      <div ref={imgRef} className={` ${s.home_container} container grid`}>
+      <div className={` ${s.home_container} container grid`}>
         <div className={`${s.home_content} grid`}>
             <div className={s.home_social}>
               <a href='https://www.linkedin.com/in/sven-andreas-clausz' target='_blank' rel='noreferrer' className={s.home_social_icon}>
