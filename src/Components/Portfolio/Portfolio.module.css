@@ -13,6 +13,7 @@
   justify-self: center;
 }
 
+
 .portfolio_title{
   font-size: var(--h3-font);
   margin-bottom: var(--m-0-5);
@@ -21,6 +22,7 @@
 .portfolio_description{
   margin-bottom:var(--m-0-75);
 }
+
 
 .portfolio_button:hover .portfolio_button_icon{
   transform: translateX(.25rem);
@@ -48,6 +50,34 @@
 .bullets_active{
   background-color: var(--primary-color);
 }
+.portfolio_button_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  height: 100%;
+ width: 100%;
+
+}
+/* Small devices */
+@media screen and (max-width:568px) {
+   .portfolio_data{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    /* justify-content: center; */
+  } 
+  
+  .portfolio_button_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height: 100%;
+   width: 100%;
+
+  }
+}
 /* Medium divices */
 @media screen and (min-width:568px) {
   .portfolio_content{grid-template-columns: repeat(2, 1fr);}
@@ -59,6 +89,7 @@
   .portfolio_content{
     align-items: center;
   }
+ 
 }
 
 /* for large divices */

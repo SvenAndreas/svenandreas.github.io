@@ -77,8 +77,11 @@ function Portfolio() {
                   rel="noreferrer"
                   className="button button_small"
                 >
+                  <span className={s.portfolio_button_content}>
+
                   Demo
                   <BsArrowRightShort className="button_icon" />
+                  </span>
                 </a>
               </div>
             </div>

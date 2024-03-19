@@ -22,7 +22,11 @@ const {language} = useContext(LanguageContext)
     <section className={`${s.services} section`} id='service'>
       <h2 className='section_title'>{language === 'ES' ? 'Servicios' : 'Services'}</h2>
       <span className='section_subtitle'>{language === 'ES' ? 'Lo que ofrezco' : 'What i offer'}</span>
-
+      <div>
+        <h3>Chatbots con AI</h3>
+        <h3>Desarrollo de aplicaciones de comercio electronico </h3> 
+        <h3>Integración de pasarelas de pago </h3> 
+      </div>
       <div className={`${s.services_container} container grid`}>
 
         <div className={s.services_content}>
