@@ -23,7 +23,7 @@ function Portfolio() {
         {language === "ES" ? "Portafolio" : "Portfolio"}
       </h2>
       <span className="section_subtitle">
-        {language === "ES" ? "Trabajos" : "Works"}
+        {language === "ES" ? "Trabajos realizados" : "Works"}
       </span>
       <div className={`${s.portfolio_container} container`}>
         <Swiper

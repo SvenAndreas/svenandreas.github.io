@@ -16,10 +16,10 @@
 --hue-color-danger:0;
 
 /* Color theme */
-/* --primary-color:hsl(var(--hue-color),69%,61%);
---secondary-color:hsl(var(--hue-color),57%,53%); */
---primary-color:rgba(0,0,0);
---secondary-color:rgba(35,35,35);
+--primary-color:hsl(var(--hue-color),69%,61%);
+--secondary-color:hsl(var(--hue-color),57%,53%);
+/* --primary-color:rgba(0,0,0);
+--secondary-color:rgba(35,35,35); */
 --ligthner-color:hsl(var(--hue-color),92%,85%);
 --title-color:hsl(var(--hue-color),8%,15%);
 --text-color:hsl(var(--hue-color),8%,45%);

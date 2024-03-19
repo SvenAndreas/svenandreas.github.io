@@ -32,29 +32,32 @@ function About() {
               Doy gran <span className={s.about_higiligth}>importancia a la comunicación</span> regular y siempre estoy
               dispuesto a ir más allá para <span className={s.about_higiligth}>garantizar la satisfacción</span>  del
               cliente.
+              Brindo un <span className={s.about_higiligth}>servicio completo y personalizado</span> en el que se dé respuesta a tus expectativas y se <span className={s.about_higiligth}>potencien tus ideas</span>.
               <br></br>
-              Estoy entusiasmado por asumir nuevos proyectos y ayudar a los
-              clientes a <span className={s.about_higiligth}>alcanzar sus objetivos.</span>
+              Estoy entusiasmado por asumir nuevos proyectos y ayudarte <span className={s.about_higiligth}>alcanzar tus metas.</span>
               <br></br>
-            
-              Me encantaría discutir más sobre tu proyecto y ver cómo puedo
-              ayudarte a{" "}
-              <span className={s.about_higiligth}>alcanzar tus metas</span>.
             </p>
           ) : (
-            <p className={s.about_description}>
-              I have experience building
+            
+<p className={s.about_description}>
+              {/* I have experience in building{" "}
               <span className={s.about_higiligth}>
-                {" "}
-                web and mobile (IOS & Android) applications.
+                web and mobile applications (IOS & Android)
+              </span>
+              .<br></br> */}
+              <span className={s.about_higiligth}>My experience</span> allows me to fully manage a project from
+              start to finish and deliver{" "}
+              <span className={s.about_higiligth}>
+                high-quality solutions
               </span>{" "}
-              My expertise allows me to fully manage a project from start to
-              finish and <span className={s.about_higiligth}>deliver high-quality solutions</span> that meet the needs of
-              my clients. I place a high importance on regular communication and
-              i'm always willing to go the extra mile to ensure <span className={s.about_higiligth}>client
-              satisfaction</span>. I'm excited to take on new projects and help clients
-              achieve their objectives. I would love to discuss your project
-              further and see how I can help you <span className={s.about_higiligth}>achieve your goals.</span>
+              that meet the needs of my clients.
+              <br></br>
+              I place great <span className={s.about_higiligth}>emphasis on regular communication</span> and am always
+              willing to go above and beyond to <span className={s.about_higiligth}>ensure client satisfaction</span>.
+              I provide a <span className={s.about_higiligth}>comprehensive and personalized service</span> where your expectations are met and your <span className={s.about_higiligth}>ideas are empowered</span>.
+              <br></br>
+              I am excited to take on new projects and help you <span className={s.about_higiligth}>achieve your goals.</span>
+              <br></br>
             </p>
           )}
 

@@ -28,7 +28,7 @@ function Skills() {
 const {language} = useContext(LanguageContext)
   return (
     <section className={`${s.skills} section`} id='skills'>
-      <h2 className='section_title'>{language === 'ES' ? 'Hablidades' : 'Skills'}</h2>
+      <h2 className='section_title'>{language === 'ES' ? 'Tecnologías' : 'Skills'}</h2>
       <span className='section_subtitle'>{language === 'ES' ? 'Nivel técnico' : 'Technical level'}</span>
       <div className={`${s.skills_container} container grid`}>  
         

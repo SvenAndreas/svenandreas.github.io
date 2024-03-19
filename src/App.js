@@ -16,10 +16,10 @@ function App() {
       <main className='main'>
         <Home />
         <About />
+        <Services />
         <Portfolio/>
         {/* <Qualification/> */}
         <Skills />
-        <Services />
         <Contactme/>
       </main>
     </div>
