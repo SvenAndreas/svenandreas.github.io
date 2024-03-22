@@ -131,7 +131,15 @@ text-align: center;
 }
 
 /* small divices */
-@media screen and (max-width:350px) {
+@media screen and (max-width:593px){
+  .services_provided_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100%), 1fr)); 
+    place-items: center;
+    grid-row-gap: 8px;
+  }
+}
+@media screen and (max-width:450px) {
   .services_container{
     grid-template-columns: max-content;
     justify-content: center;
@@ -142,10 +150,22 @@ text-align: center;
   .services_modal{
     padding: 0 .5rem;
   }
+ 
+  .services_provided_icons{
+    font-size: 80px;
+  }
+
 }
 
 /* for mediumd divices */
-
+@media screen and (min-width:593px){
+  .services_provided_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100%/2), 1fr)); 
+    place-items: center;
+    grid-row-gap: 8px;
+  }
+}
 @media screen and (min-width:768px) {
   .services_container{
     grid-template-columns: repeat(2,218px);
@@ -167,5 +187,11 @@ text-align: center;
 @media screen and (min-width:1024px) {
   .services_container{
     grid-template-columns: repeat((2,300px)) !important;
+  }
+  .services_provided_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100%/3), 1fr)); 
+    place-items: center;
+    grid-row-gap: 8px;
   }
 }
