@@ -6,29 +6,20 @@ import { BsCheck2Circle } from "react-icons/bs";
 import { BsChevronExpand } from "react-icons/bs";
 import { FcDataConfiguration } from "react-icons/fc";
 import { LanguageContext } from "../../Contexts/languageContext";
-import SecurityUpdateGoodIcon from "@mui/icons-material/SecurityUpdateGood";
 import TerminalIcon from "@mui/icons-material/Terminal";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import StoreIcon from "@mui/icons-material/Store";
 import AdbIcon from "@mui/icons-material/Adb";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import WebIcon from "@mui/icons-material/Web";
-
+import { handleScroll } from "./utils/animateOnScroll";
 function Services() {
   useEffect(() => {
-    const handleScroll = () => {
-      const elements = document.querySelectorAll(".animated");
-      elements.forEach(e=>{
-        if(e && window.scrollY + 400 > e.offsetTop){
-          e.classList.add('animate')
-        }
-        if (e && window.scrollY  < (e.offsetTop - 480) ){
-          e.classList.remove('animate')
-        }
-
-      })
-    };
+   
     window.addEventListener('scroll',handleScroll)
+    return()=>{
+      window.removeEventListener('scroll',handleScroll)
+    }
   }, []);
   const handleOpenModal = (e) => {
     const modal = document.getElementsByClassName(e.currentTarget.id);
