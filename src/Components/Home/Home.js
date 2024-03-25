@@ -6,13 +6,13 @@ import { AiOutlineSend } from 'react-icons/ai'
 import { CiDesktopMouse2 } from 'react-icons/ci'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import profile from '../../Assets/perfil.png'
-import useScrollEffect from '../../CustomHooks/useScrollEffect'
+// import useScrollEffect from '../../CustomHooks/useScrollEffect'
 import { LanguageContext } from '../../Contexts/languageContext'
 
 
 function Home() {
   const {language} = useContext(LanguageContext)
-  const imgRef=useScrollEffect()
+  // const imgRef=useScrollEffect()
   return (
     <section className={`${s.home} section`} id='home'>
       <div className={` ${s.home_container} container grid`}>
