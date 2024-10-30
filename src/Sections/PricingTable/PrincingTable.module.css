@@ -1,0 +1,124 @@
+.container{
+
+position: relative;
+/* isolation: isolate; */
+}
+.container::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url('../../Assets/galaxiatraquila.jpg');
+    background-size: cover;
+    opacity: 0.40;
+    /* filter: blur(4px); */
+    /* filter: blur(2px); */
+
+}
+.img{
+    position: absolute;
+    z-index: -1;
+    opacity: .2;
+    /* filter: blur(2px); */
+    /* object-fit: fill; */
+    /* aspect-ratio: '16:9'; */
+    /* height: 1200px; */
+}
+.cards_container{
+    grid-template-columns: repeat(2,350px);
+    place-items: center;
+    place-content: center;
+    gap:8rem;
+    padding-bottom: 10rem;
+}
+
+.title{
+    font-size: var(--xxl-font);
+    padding: 30px;
+    position: relative;
+    top:50px;
+    color:var(--text-white);
+    text-shadow: 2px 3px 2px var(--primary-color);
+    font-weight: var(--font-semibold);
+}
+
+.subtitle{
+    color: var(--text-white);
+    text-shadow: 2px 3px 2px var(--primary-color);
+    font-weight: var(--font-semibold);
+    position: relative;
+    top:50px
+}
+.title_highlight{
+    color:var(--secondary-color);
+    text-shadow: 2px 3px 2px rgba(255, 255, 255, 0.8);
+    font-size: 4.5rem;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  
+  .wave svg {
+    /* position: relative;
+      display: block;
+      width: calc(199% + 1.3px);
+      height: 48px; */
+      position: relative;
+      display: block;
+      width: calc(175% + 1.3px);
+      height: 90px;
+  }
+  
+  .wave .shape-fill {
+    fill: #000000;
+  }
+
+
+.wave1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave1 svg {
+  position: relative;
+  display: block;
+  width: calc(146% + 1.3px);
+  height: 97px;
+}
+
+.wave1 .shape_fill {
+  fill: rgb(0,0,0);
+}
+
+
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  
+  .wave2 svg {
+    position: relative;
+    display: block;
+    width: calc(146% + 1.3px);
+    height: 97px;
+  }
+  
+  .wave2 .shape-fill {
+    fill: #000000;
+  }
+

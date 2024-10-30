@@ -1,0 +1,32 @@
+.container {
+    padding: 8px;
+    position: relative;
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que el contenido no sobresalga del contenedor */
+    background-color: transparent; /* Asegura que el fondo del botón sea transparente para que el pseudo-elemento sea visible */
+  }
+  
+  .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Color de fondo con algo de opacidad para aplicar el desenfoque */
+    backdrop-filter: blur(5px);
+    opacity: 0.8; /* Ajusta la opacidad si es necesario */
+    z-index: 1; /* Asegura que el fondo esté detrás del contenido */
+  }
+  
+  .container > p {
+    position: relative; /* Necesario para que el z-index funcione */
+    z-index: 2; /* Asegura que el texto esté encima del pseudo-elemento */
+    color: var(--primary-color);
+    font-family: var(--body-font);
+    font-weight: var(--font-semibold);
+    font-size: var(--h3-font);
+  }
+  

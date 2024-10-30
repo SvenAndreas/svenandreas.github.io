@@ -1,0 +1,20 @@
+
+.plan_offer_container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.feature_item{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    font-weight: var(--font-thin);
+    font-family: var(--body-font);
+    font-size: var(--normal);
+
+}
+.check_icon{
+    min-width: 30px;
+    height: 30px;
+    color:rgb(135, 135, 135)
+}

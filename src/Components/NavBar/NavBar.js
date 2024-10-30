@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import IntegrationInstructionsOutlinedIcon from "@mui/icons-material/IntegrationInstructionsOutlined";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
@@ -12,6 +10,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import useDetectHover from "../../CustomHooks/useDetectHover";
 import { LanguageContext } from "../../Contexts/languageContext";
 import logo from '../../Assets/evoluciondigital.png'
+import Logo from "../Logo/Logo";
 
 function NavBar() {
   const [isActive, setIsActive] = useState(false);
@@ -21,16 +20,10 @@ function NavBar() {
   const { hovered } = useDetectHover("dropdown", 0);
   const { language, setLanguage } = useContext(LanguageContext);
   return (
-    <header className={s.nav}>
+    <header id='nav' className={s.nav}>
       <nav className={s.nav_container}>
         <div className={s.nav_header}>
-          <div className={s.nav_logo_container}>
-            <img alt="Evolucion digital Logo, árbol digital con ramificaciones y raíces que simulan conexiones electrónicas." width={1322} height={1600} className={s.nav_logo_img} src={logo}/>
-            <a href="#about" className={s.nav_logo}>
-              EVOLUCIÓN DIGITAL
-              <p className={s.nav_logo_subtitle}>IMPULSÁ TU NEGOCIO</p>
-            </a>
-          </div>
+          <Logo/>
           <div id="dropdown" className={s.nav_dropdown_container}>
             <KeyboardArrowDownIcon
               className={`${s.nav_dropdown_icon} ${
@@ -79,7 +72,7 @@ RelShot 263, Echando una mano, Public domain, via Wikimedia Commons
                 {language === "ES" ? "Inicio" : "Home"}
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#about"
                 className={s.nav_link}
@@ -88,8 +81,8 @@ RelShot 263, Echando una mano, Public domain, via Wikimedia Commons
                 <PersonOutlineOutlinedIcon className={s.nav_icon} />
                 {language === "ES" ? "Sobre mí" : "About"}
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a
                 href="#skills"
                 className={s.nav_link}
@@ -98,7 +91,7 @@ RelShot 263, Echando una mano, Public domain, via Wikimedia Commons
                 <ArticleOutlinedIcon className={s.nav_icon} />
                 {language === "ES" ? "Habilidades" : "Skills"}
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="#service"

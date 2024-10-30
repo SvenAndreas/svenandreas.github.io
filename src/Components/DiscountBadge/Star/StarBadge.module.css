@@ -1,0 +1,36 @@
+.star {
+    position: absolute;
+    width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: var(--xxl-font);
+color: var(--primary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  }
+
+.star::before{
+    content: '';
+    position: absolute;
+    opacity: 0.6;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+  background: linear-gradient(135deg, rgba(255, 69, 88, 0.296), rgba(255, 117, 70, 0.7), rgba(128, 0, 128, 0.6));
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.star > span{
+position: relative;
+z-index: 2;
+}

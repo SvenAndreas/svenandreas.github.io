@@ -59,7 +59,7 @@ function Contactme() {
   return (
     <section className={`${s.contact} section`} id='contact'>
       <h2 className='section_title'>{language === 'ES' ?'Contacto':'Contact me'}</h2>
-      <span className='section_subtitle'>{language === 'ES' ?'Envíame un mensaje':'Get in touch'}</span>
+      <span className='section_subtitle'>{language === 'ES' ?'Enviar un mensaje':'Get in touch'}</span>
 
       <div className={`${s.contact_container} container grid`}>
         <div>

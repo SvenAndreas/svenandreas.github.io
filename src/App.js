@@ -1,28 +1,27 @@
-import './App.css';
-import NavBar from './Components/NavBar/NavBar';
-import Home from './Components/Home/Home';
-import About from './Components/About/About';
-import Skills from './Components/Skills/Skills';
+import "./App.css";
+import NavBar from "./Components/NavBar/NavBar";
+import Home from "./Components/Home/Home";
 // import Qualification from './Components/Quialification/Qualification';
-import Services from './Components/Services/Services';
-import Portfolio from './Components/Portfolio/Portfolio';
-import Contactme from './Components/Contactme/Contactme';
-import { LanguageProvider } from './Contexts/languageContext';
+import Contactme from "./Components/Contactme/Contactme";
+import { LanguageProvider } from "./Contexts/languageContext";
+import PricingTable from "./Sections/PricingTable/PricingTable";
+import MovingServices from "./Sections/Services/MovingServices/MovingServices";
+import AboutUs from "./Sections/AboutUs/AboutUs";
+import Footer from "./Sections/Footer/Footer";
+import AboutServices from "./Sections/AboutUs/AboutServices/AboutServices";
 function App() {
   return (
     <LanguageProvider>
-    <div>
       <NavBar />
-      <main className='main'>
+      <main className="main">
         <Home />
-        <About />
-        <Services />
-        <Portfolio/>
-        {/* <Qualification/> */}
-        <Skills />
-        <Contactme/>
+        <AboutServices />
+        <MovingServices />
+        {/* <AboutUs /> */}
+        <PricingTable />
+        <Contactme />
       </main>
-    </div>
+      <Footer />
     </LanguageProvider>
   );
 }

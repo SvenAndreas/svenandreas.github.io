@@ -6,6 +6,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Kanit:wght@400;500;600&family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600&family=Quicksand:wght@400;500;600&family=Rajdhani:wght@300;400;500;600;700&family=Squada+One&family=Bungee+Outline&display=swap');
 
+@font-face {
+  font-family: Stozl;
+  src: url('./Assets/fonts/Stolzl/stolzl_regular.otf') format('opentype');
+}
 
 
 :root{
@@ -17,16 +21,17 @@
 
 /* Color theme */
 --primary-color:hsl(var(--hue-color),69%,61%);
---secondary-color:hsl(var(--hue-color),57%,53%);
+--secondary-color:hsl(var(--hue-color),51%,53%);
 /* --primary-color:rgba(0,0,0);
 --secondary-color:rgba(35,35,35); */
---ligthner-color:hsl(var(--hue-color),92%,85%);
---title-color:hsl(var(--hue-color),0%,0%);
---text-color:hsl(var(--hue-color),0%,40%);
+--ligthner-color:hsl(var(--hue-color),100%,90%);
+--title-color:hsl(var(--hue-color),100%,100%);
+--text-color:hsl(var(--hue-color),0%,90%);
 --text-color-ligthner:hsl(var(--hue-color),8%,65%);
+--text-white:hsl(var(--hue-color),100%,100%);
 --input-color:hsl(var(--hue-color),70%,96%);
 --container-color:#FFF;
---body-color:hsl(var(--hue-color),20%,90%);
+--body-color:hsl(var(--hue-color),0%,0%);
 --scroll-bar-color:hsl(var(--hue-color),12%,90%);
 --scroll-thumb-color:hsl(var(--hue-color),12%,80%);
 --secondary-bg:hsl(var(--hue-color-secondary),80%,19%);
@@ -40,8 +45,9 @@
 --squada-font:"Squada One",'Open Sans',sans-serif;
 --subtitle-font:"Rajdhani",'Poppins',sans-serif;
 --bungee-font:'Bungee Outline',sans-serif;
---xxl-font:3.5rem;
---big-font:2rem;
+--3xl-font:3.75rem;
+--xxl-font:2.6rem;
+--big-font:1.75rem;
 --h1-font:1.5rem;
 --h2-font:1.25rem;
 --h3-font:1.125rem;
@@ -113,12 +119,14 @@ code {
   padding: 2rem 0 4rem;
 }
 .section_title{
-  font-size: var(--h1-font);
+  font-size: var(--xxl-font);
 }
 .section_subtitle{
   display:block;
-  font-size: var(--samll);
+  font-size: var(--h1-font);
   margin-bottom: var(--m-3);
+  font-weight: var(--font-medium);
+
 }
 
 .section_title,.section_subtitle{
@@ -201,7 +209,37 @@ code {
   cursor: pointer;
 }
 
+.divider{
+  aspect-ratio: 960/200;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size:cover;
+  border-top-left-radius: 30% 110%;
+  border-top-right-radius: 30% 100%;
 
+  /* margin-top: 6rem; */
+}
+
+.layer1{
+  background-image: url('./Assets/DividerLayeredWaves1.svg');
+}
+
+/* ANIMATIONS */
+/* @keyframes slideBottom {
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(-200px);
+  }
+}
+
+.slide_from_bottom{
+  animation: slideBottom linear;
+  animation-timeline: view();
+  animation-range:  cover 30%
+} */
 
 /* Swipers styles */
 .swiper-button-next::after,.swiper-button-prev::after{
@@ -258,23 +296,50 @@ code {
     margin-right: auto;
   }
   .section{
-    padding: 6rem 0 2rem;
+    padding: 6rem 0 4rem;
+    /* margin-bottom: 8rem; */
   }
-  .section_subtitle{
+  /* .section_subtitle{
     margin-bottom: 4rem;
+  } */
+  .section_subtitle{
+    display:block;
+    /* font-size: var(--h3-font); */
+    /* margin-bottom: var(--m-3); */
+    font-weight: var(--font-thin);
+    /* max-width: 600px;
+    text-align: center; */
+    
   }
 }
 
 /* font size for large screens */
 @media screen and (min-width: 968px) {
   :root{
-    --big-font:3rem;
-    --h1-font:2.25rem;
-    --h2-font:1.5rem;
-    --h3-font:1.25rem;
-    --normal:1rem;
-    --small:.875rem;
-    --xs:.81rem;
+    --3xl-font:5rem;
+    --xxl-font:3.5rem;
+    --big-font:2rem;
+    --h1-font:1.5rem;
+    --h2-font:1.25rem;
+    --h3-font:1.125rem;
+    --normal:.938rem;
+    --small:.813rem;
+    --xs:.75rem;
   }
 }
 
+
+.hidden{
+  background-color: white;
+  /* border:10px solid red; */
+  position: absolute;
+  opacity: 0;
+  /* transform: translateY(40400px) scale(100); */
+  transition: opacity 400ms ease-in, transform 5s ease-in;
+}
+
+.expanded{
+  opacity: 1;
+  transition: opacity 400ms ease-in, transform 5s ease-in;
+
+}
